@@ -1,0 +1,38 @@
+
+.image-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Styling for the image to make it responsive */
+.image-container img {
+    width: 100%; /* Make the image take up 100% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn't exceed the container size */
+}
+
+/* Styling for the link */
+.visit-link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #f39c12; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.visit-link:hover {
+    background-color: #e67e22; /* Hover background color */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 100vw; /* Make the image fit the viewport width */
+        height: auto;
+    }
+}
