@@ -1,67 +1,115 @@
 body {
     background-color: #f5f7fa;
     font-family: Arial, sans-serif;
-  }
-  #nav-bar{
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar {
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: black;
+    padding: 10px 0;
   }
   
-  .navbar{
-    background-color: rgb(1, 1, 1);
+  .navbar-brand {
+    display: flex;
+    align-items: center;
   }
   
-  .navbar-nav li{
-    padding: 0 10px;
+  .logo-img {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Space between logo and text */
   }
   
-  .navbar-nav li a{
-    color:rgb(242, 240, 240)!important;
+  .brand-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    text-transform: uppercase;
+  }
+  
+  .navbar-nav li a {
+    color: white !important;
     font-weight: 550;
-  
+    padding: 10px 15px;
   }
   
-  .navbar-toggler{
+  .navbar-toggler {
     outline: none !important;
+    border-color: white;
   }
   
-  .navbar li navDropdown{
-    padding-left: 10%;
+  .navbar-toggler-icon {
+    color: white;
   }
   
+  .nav-item a:hover {
+    color: #f39c12 !important; /* Highlight color on hover */
+  }
   
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .brand-name {
+      font-size: 1rem; /* Smaller font size on mobile */
+    }
+    
+    .navbar-nav {
+      text-align: center;
+    }
   
+    .navbar-nav li {
+      margin-bottom: 10px;
+    }
   
-  .hero-section {
+    .navbar-nav li a {
+      padding: 10px 20px;
+    }
+  }
+  
+.hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px 100px;
     height: 100vh;
-  }
-  
-  .hero-section h1 {
+}
+
+.hero-section h1 {
     font-size: 48px;
     font-weight: 700;
-  }
-  
-  .hero-section p {
+}
+
+.hero-section p {
     font-size: 18px;
     color: #7a7a7a;
-  }
-  
-  .hero-section img {
+}
+
+.hero-section img {
     max-width: 100%;
     transform: rotate(0deg);
     transition: transform 0.8s ease-in-out;
-  }
-  
-  .hero-section img:hover {
+}
+
+.hero-section img:hover {
     transform: rotate(15deg);
-  }
-  
-  .btn-custom {
+}
+
+@media (max-width: 768px) {
+    .hero-section img {
+        margin-bottom: 80%;
+    }
+
+    .hero-section{
+        margin-top: 30%;
+    }
+}
+     
+
+
+
+.btn-custom {
     border: 2px solid black;
     border-radius: 30px;
     padding: 10px 20px;
@@ -69,10 +117,575 @@ body {
     font-weight: bold;
     margin-top: 20px;
     transition: background-color 0.3s;
-  }
-  
-  .btn-custom:hover {
+}
+
+.btn-custom:hover {
     background-color: black;
     color: white;
-  }
+}
+
+
+
+
+
+
+.about-us-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: -70px;
+}
+
+.about-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    margin-left: -80px;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-left: -80px;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+.image-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* General styles remain the same */
+
+/* Responsive Adjustments for About Us Section */
+@media (max-width: 768px) {
+    .about-us-section {
+        margin-top: 0; /* Remove negative margin */
+        padding: 30px 15px; /* Add padding for better spacing */
+    }
+
+    .container-fluids {
+        padding: 0; /* Remove padding */
+    }
+
+    .row.no-gutters {
+        display: block; /* Stack items vertically */
+        text-align: center; /* Center align the content */
+    }
+
+    .col-md-6 {
+        width: 100%; /* Ensure columns take full width */
+        margin-bottom: 20px; /* Add margin between sections */
+    }
+
+    .about-title {
+        font-size: 1.8rem; /* Reduce font size */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .about-text {
+        font-size: 1rem; /* Reduce font size */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        text-align: center; /* Center align the text */
+        text-align: justify;
+    }
+
+    .image-container {
+        max-width: 100%; /* Ensure the image container does not exceed viewport width */
+        margin: 20px auto; /* Center the image container with auto margins */
+    }
+}
+
   
+
+
+
+
+
+
+
+#solutions {
+    background-color: black;
+    padding: 120px;
+}
+
+#solutions h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    font-size: 50px;
+}
+
+.card {
+    height: 200px;
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    margin: 10px;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.card-img-top {
+    height: 50%;
+    object-fit: cover;
+    border-bottom: 1px solid #444;
+}
+
+.card-body {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments for #solutions Section */
+@media (max-width: 768px) {
+    #solutions {
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+    }
+
+    #solutions h2 {
+        margin-top: 30px; /* Add space above the heading */
+        font-size: 2.2rem; /* Increase text size for better readability */
+    }
+
+    .card {
+        margin: 30px 10px; /* Increase margin between cards for vertical spacing */
+        height: auto; /* Allow cards to adjust height based on content */
+    }
+}
+
+.fullscreen-image {
+    width: 80vw;
+    height: auto;
+    margin-left: 100px;
+    padding: 20px;
+    margin-right: 10%;
+}
+
+#section {
+    margin: 0;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 15px;
+}
+
+.how-it-works-section {
+    position: relative;
+    padding: 50px 30px;
+    background: #f9f9f9;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.steps-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.steps-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.step-number {
+    background-color: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-text {
+    max-width: 85%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.step-text strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .section-title {
+        font-size: 30px; /* Decrease the font size of the title */
+        margin-bottom: 20px; /* Adjust space below the title */
+        text-align: center; /* Align step number to the left */
+
+    }
+
+    .steps-list li {
+        flex-direction: column; /* Stack steps vertically */
+        align-items: flex-start; /* Align items to the start */
+        margin-bottom: 20px; /* Reduce space between steps */
+        text-align: left; /* Align step number to the left */
+
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem; /* Adjust step number size */
+        margin-bottom: 10px; /* Space below the step number */
+        margin-right: 0; /* Remove right margin */
+        text-align: left; /* Align step number to the left */
+
+    }
+
+    .step-text {
+        max-width: 100%; /* Allow full width for text */
+        font-size: 1.1rem; /* Slightly reduce font size */
+    }
+
+    .image-container {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%; /* Make image container full width */
+    }
+
+    .img-fluid {
+        width: 100%; /* Ensure image is responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.quote {
+    font-size: 30px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #020e23;
+    box-shadow: #000;
+    color: white;
+}
+
+.invinsible a {
+    color: aliceblue;
+    font-size: 1px;
+}
+
+.btn-grey {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+}
+
+.btn-grey:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Footer Styling */
+#main-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f39c12;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .image-container {
+        margin: 0;
+    }
+
+    #solutions {
+        padding: 60px 20px;
+    }
+
+    #solutions h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .fullscreen-image {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #section {
+        margin-left: 0;
+    }
+
+    .how-it-works-section {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+        margin: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .about-title {
+        font-size: 1.25rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+
+    .image-container {
+        margin: 0;
+    }
+
+    #solutions {
+        padding: 50px 10px;
+    }
+
+    #solutions h2 {
+        font-size: 1.75rem;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .fullscreen-image {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #section {
+        margin-left: 0;
+    }
+
+    .how-it-works-section {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .quote {
+        font-size: 1.1rem;
+        margin: 15px;
+    }
+}
